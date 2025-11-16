@@ -1,0 +1,294 @@
+<!doctype html> <html lang="en"> <head> <meta charset="utf-8" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <title>VLV ASSOCIATES — Premium Construction & MEP</title> <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet"> <style> :root{ --bg:#0D0D0D; /* matte black */ --primary:#FF6A00; /* matte orange */ --primary-dark:#E55F00; /* ~10% darker */ --secondary:#1A1A1A; /* soft charcoal */ --text:#FFFFFF; --text-muted:#D9D9D9; --card: #0F0F0F; --glass: rgba(255,255,255,0.02); --radius:14px; --btn-radius:6px; --shadow-soft: 0 8px 30px rgba(0,0,0,0.6); --max:1100px; } html,body{ margin:0; height:100%; font-family:Poppins,Inter,system-ui; background:var(--bg); color:var(--text); -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale; } *{box-sizing:border-box} .container{ max-width:var(--max); margin:20px auto; padding:20px; } a { color:var(--text-muted); text-decoration:none; } /* HEADER */ header{ display:flex; align-items:center; justify-content:space-between; background:linear-gradient(180deg,var(--secondary),#121212); padding:18px; border-radius:12px; box-shadow: var(--shadow-soft); border:1px solid rgba(255,255,255,0.03); } .brand{display:flex;align-items:center;gap:14px} .logo{ width:64px;height:64px;border-radius:12px; background:linear-gradient(160deg,var(--primary),#ff8b3a); display:flex;align-items:center;justify-content:center; color:white;font-weight:800;font-size:20px; box-shadow:0 6px 18px rgba(255,106,0,0.12), inset 0 -4px 12px rgba(0,0,0,0.2); } h1,h2,h3,h4{margin:0;color:var(--text)} .muted{color:var(--text-muted)} .nav{display:flex;gap:16px;align-items:center;font-size:14px} /* HERO */ .hero{ margin-top:20px; position:relative; border-radius:16px; overflow:hidden; background:linear-gradient(180deg,#0B0B0B,#0F0F0F); height:72vh; border:1px solid rgba(255,255,255,0.02); box-shadow:0 20px 60px rgba(0,0,0,0.7); } .hero .media{ position:absolute; inset:0; background-size:cover; background-position:center; filter:brightness(.48); transition:transform .6s ease; will-change:transform; } .hero:hover .media{ transform: scale(1.03); } .hero::after{ content:""; position:absolute;inset:0; background:linear-gradient(90deg,rgba(13,13,13,0.4),rgba(10,10,10,0.2)); pointer-events:none; } .hero-inner{ position:relative;z-index:2; display:flex;gap:30px; padding:48px; } .hero-left{max-width:720px;color:var(--text)} .hero-left h2{font-size:42px;line-height:1.08} .hero-left p{color:var(--text-muted);margin-top:10px;font-size:16px} .btn{ padding:12px 18px; border-radius:var(--btn-radius); border:0; cursor:pointer; font-weight:700; font-size:15px; background:var(--primary); color:white; transition:background .18s ease, transform .12s ease, box-shadow .12s ease; box-shadow:0 8px 24px rgba(255,106,0,0.12); } .btn:hover{ background:var(--primary-dark); transform:translateY(-2px); } .btn:active{ transform:translateY(0); } /* Ensure all buttons (including links with btn class) follow the same style */ .btn-ghost{ background:var(--primary); color:white; border:1px solid rgba(0,0,0,0.08); } .cta-row{display:flex;gap:12px;margin-top:18px} .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px} .badge{ padding:6px 12px; border-radius:999px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.03); font-size:13px;color:var(--text-muted); } .hero-right{flex:1;display:flex;justify-content:flex-end} .snapshot{ width:360px;padding:18px;border-radius:12px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); backdrop-filter:blur(6px); color:var(--text-muted); border:1px solid rgba(255,255,255,0.03); box-shadow:0 10px 30px rgba(0,0,0,0.6); } .snapshot h4{color:var(--text);margin-bottom:6px} .snapshot ul{color:var(--text-muted);margin:0;padding-left:18px} /* SLIDER */ .slider{ margin-top:18px; border-radius:12px; overflow:hidden; height:280px; position:relative; border:1px solid rgba(255,255,255,0.03); box-shadow:0 18px 40px rgba(0,0,0,0.6); } .slides{ display:flex; width:300%; height:100%; animation:slide 18s infinite linear; } .slide{ flex:0 0 100%; background-size:cover; background-position:center; transition:transform .6s ease; } .slide::after{ content:""; position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.15),rgba(0,0,0,0.45)); } @keyframes slide{ 0%{transform:translateX(0)} 33%{transform:translateX(-100%)} 66%{transform:translateX(-200%)} 100%{transform:translateX(0)} } .slider-overlay{ position:absolute; left:20px;bottom:20px; color:var(--text); text-shadow:0 2px 8px rgba(0,0,0,0.7); } /* SECTIONS */ section{margin-top:40px} .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; } .card{ background:linear-gradient(180deg,#0E0E0E,#111); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); box-shadow:0 8px 30px rgba(0,0,0,0.6); color:var(--text-muted); } .service-icon{font-size:26px;margin-bottom:8px} /* PORTFOLIO GRID (modern responsive) */ .portfolio, .portfolio-grid{ margin-top:20px; display:grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap:20px; } /* keep older .portfolio .item styles compatible */ .portfolio .item, .portfolio-grid .item{ position:relative; height:220px; background-size:cover; background-position:center; border-radius:12px; border:1px solid rgba(255,255,255,0.03); overflow:hidden; transition:transform .45s ease, box-shadow .45s ease, background-size .45s ease; background-repeat:no-repeat; } /* hover zoom effect via background-size increase */ .portfolio .item:hover, .portfolio-grid .item:hover{ transform:translateY(-6px); box-shadow:0 22px 60px rgba(0,0,0,0.75); background-size:110%; } /* Item overlay text example (keeps structure) */ .portfolio .item .overlay, .portfolio-grid .item .overlay{ position:absolute;left:0;right:0;bottom:0;padding:12px; background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,0.5)); color:var(--text); font-weight:600; font-size:14px; } /* TWO COLUMN SECTION */ .two-col{ display:grid;grid-template-columns:1fr 400px; gap:20px; } /* BOOKING FORM */ .booking{ margin-top:18px; background:linear-gradient(180deg,#0E0E0E,#111); padding:18px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); box-shadow:0 8px 30px rgba(0,0,0,0.6); display:grid; grid-template-columns:1fr 320px; gap:20px; } input,select,textarea{ width:100%;padding:10px;border-radius:8px; border:1px solid rgba(255,255,255,0.06); background:#0B0B0B; color:var(--text); } label{color:var(--text-muted);font-size:13px} /* FOOTER */ footer{ margin-top:40px; background:linear-gradient(180deg,var(--secondary),#0B0B0B); padding:20px; border-radius:12px; border:1px solid rgba(255,255,255,0.03); display:flex; align-items:center; justify-content:space-between; box-shadow: var(--shadow-soft); color:var(--text-muted); } /* WHATSAPP BUTTON */ .whatsapp{ position:fixed; right:18px;bottom:18px; width:64px;height:64px; border-radius:12px; background:var(--primary); display:flex;align-items:center;justify-content:center; color:white;font-size:28px; text-decoration:none; box-shadow:0 12px 36px rgba(255,106,0,0.18); z-index:99; border:2px solid rgba(255,255,255,0.04); } /* small helpers */ .muted-small{color:var(--text-muted);font-size:13px} /* RESPONSIVE */ @media(max-width:1000px){ .hero-inner{flex-direction:column;padding:28px} .hero{height:auto} .two-col{grid-template-columns:1fr} .booking{grid-template-columns:1fr} } @media(max-width:700px){ .grid-3{grid-template-columns:1fr} .portfolio, .portfolio-grid{grid-template-columns:1fr} .container{padding:14px} .logo{width:54px;height:54px;font-size:18px} } </style> </head> <body> <div class="container">
+
+  <!-- HEADER -->
+<header>
+  <div class="brand">
+    <div class="logo">VLV</div>
+    <div>
+      <h1>VLV ASSOCIATES</h1>
+      <div class="muted" style="font-size:13px">Dubai-style Construction • Premium MEP • Fit-Outs</div>
+    </div>
+  </div>
+
+  <div class="nav">
+    <div class="muted">Call: +971 55 555 5555</div>
+    <!-- brochure download now points to an online demo image (replaced local file) -->
+    <a class="muted" download href="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1200&q=80">Download Brochure</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<main class="hero">
+  <!-- HERO image replaced with Unsplash architecture/construction image -->
+  <div class="media" style="background-image:url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1600&q=80')"></div>
+
+  <div class="hero-inner">
+    <div class="hero-left">
+      <h2>We Build Dubai-Grade Spaces — Luxury Fit-Outs, MEP & Turnkey Construction</h2>
+      <p>End-to-end construction, MEP engineering and luxury interior finishes for villas, hotels, retail and premium apartments.</p>
+
+      <div class="cta-row">
+        <button class="btn btn-primary" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Request Site Survey</button>
+        <button class="btn btn-ghost" onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">View Projects</button>
+      </div>
+
+      <div class="badge-row">
+        <div class="badge">ISO 9001</div>
+        <div class="badge">Authorized MEP Contractors</div>
+        <div class="badge">Dubai Project Managers</div>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="snapshot" style="background-image:url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;">
+        <h4>Quick Project Snapshot</h4>
+        <div class="muted">Typical turnkey delivery for premium jobs</div>
+        <ul>
+          <li>Design coordination & shop drawings</li>
+          <li>Value engineering & procurement</li>
+          <li>Special finishes & bespoke joinery</li>
+          <li>Testing, commissioning & O&M</li>
+        </ul>
+        <div style="display:flex; gap:8px; margin-top:12px">
+          <button class="btn btn-primary" onclick="openWhatsApp('I need a site survey for a premium fit-out')">Schedule Survey</button>
+          <button class="btn btn-ghost" onclick="openWhatsApp('Send me a capability brochure & references')">Get Brochure</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider -->
+  <div class="slider">
+    <div class="slides">
+      <!-- Three slider images replaced with Unsplash architecture/construction images -->
+      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=1600&q=80')"></div>
+      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80')"></div>
+      <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1523413651479-597eb2da0ad6?auto=format&fit=crop&w=1600&q=80')"></div>
+    </div>
+
+    <div class="slider-overlay">
+      <h3>Premium Plumbing, Tiling & Electrical — Fast, Certified Teams</h3>
+      <p style="max-width:520px">Highly trained technicians, industrial MEP teams, and finish carpenters.</p>
+    </div>
+  </div>
+</main>
+
+<!-- SERVICES -->
+<section id="services">
+  <h3>Our Services</h3>
+  <p class="muted">Full-stack construction & MEP packages — tailored for high-end projects.</p>
+
+  <div class="grid-3" style="margin-top:16px">
+    <div class="card" style="background-image:url('https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;">
+      <div style="background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.6)); padding:18px; border-radius:12px;">
+        <div class="service-icon">🏗️</div>
+        <h4 style="color:var(--text)">Turnkey Fit-Outs</h4>
+        <p class="muted">Luxury interiors, FF&E coordination, bespoke joinery and finishes.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background-image:url('https://images.unsplash.com/photo-1505691723518-36a1d3b79c6d?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;">
+      <div style="background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.6)); padding:18px; border-radius:12px;">
+        <div class="service-icon">⚙️</div>
+        <h4 style="color:var(--text)">MEP Systems</h4>
+        <p class="muted">HVAC, plumbing, chilled water and full commissioning.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background-image:url('https://images.unsplash.com/photo-1505692794400-5f3b6a1a1d2c?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;">
+      <div style="background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.6)); padding:18px; border-radius:12px;">
+        <div class="service-icon">🧱</div>
+        <h4 style="color:var(--text)">Tiling & Waterproofing</h4>
+        <p class="muted">Porcelain, marble, substrate prep, waterproofing systems.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;">
+      <div style="background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.6)); padding:18px; border-radius:12px;">
+        <div class="service-icon">⚡</div>
+        <h4 style="color:var(--text)">Electrical & Lighting</h4>
+        <p class="muted">Distribution boards, smart lighting and testing.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background-image:url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;">
+      <div style="background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.6)); padding:18px; border-radius:12px;">
+        <div class="service-icon">🚨</div>
+        <h4 style="color:var(--text)">Emergency & Maintenance</h4>
+        <p class="muted">24/7 leak mitigation, temporary power and repairs.</p>
+      </div>
+    </div>
+
+    <div class="card" style="background-image:url('https://images.unsplash.com/photo-1499914485622-a88fac536b24?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;">
+      <div style="background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.6)); padding:18px; border-radius:12px;">
+        <div class="service-icon">📐</div>
+        <h4 style="color:var(--text)">Consulting & Value Engineering</h4>
+        <p class="muted">Cost optimization, vendor sourcing and permit coordination.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="projects">
+  <h3>Portfolio & Gallery</h3>
+  <p class="muted">Selected snapshots from on-going and completed work — plumbing teams, tiling installation and electrical panels.</p>
+
+  <!-- Use both classes to preserve any previous hooks while following requested .portfolio-grid layout -->
+  <div class="portfolio portfolio-grid">
+    <!-- The four user-provided URLs used directly, repeated to fill layout but kept exact -->
+    <div class="item" style="background-image:url('https://images.unsplash.com/photo-1597000307484-7a29f72f8c66?auto=format&fit=crop&w=800&q=80')">
+      <div class="overlay">Project Snapshot</div>
+    </div>
+    <div class="item" style="background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80')">
+      <div class="overlay">Project Snapshot</div>
+    </div>
+    <div class="item" style="background-image:url('https://images.unsplash.com/photo-1526498460520-4c246339dccb?auto=format&fit=crop&w=800&q=80')">
+      <div class="overlay">Project Snapshot</div>
+    </div>
+    <div class="item" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80')">
+      <div class="overlay">Project Snapshot</div>
+    </div>
+
+    <!-- Additional gallery items (visually-matching Unsplash picks) -->
+    <div class="item" style="background-image:url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=800&q=80')">
+      <div class="overlay">Project Snapshot</div>
+    </div>
+    <div class="item" style="background-image:url('https://images.unsplash.com/photo-1467269204594-9661b134dd2b?auto=format&fit=crop&w=800&q=80')">
+      <div class="overlay">Project Snapshot</div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASES -->
+<section>
+  <div class="two-col">
+    <div>
+      <h3>Project Delivery — Phases</h3>
+      <div class="card" style="margin-top:12px">
+        <h4>Phase 1 — Mobilization & Survey</h4>
+        <p class="muted">Initial site survey, risk assessment and routing checks.</p>
+
+        <h4 style="margin-top:12px">Phase 2 — Design Coordination</h4>
+        <p class="muted">Shop drawings, consultant coordination, final approvals.</p>
+
+        <h4 style="margin-top:12px">Phase 3 — Execution</h4>
+        <p class="muted">Daily QA checks, procurement and skilled labor deployment.</p>
+
+        <h4 style="margin-top:12px">Phase 4 — Testing & Handover</h4>
+        <p class="muted">Commissioning, O&M manuals and client handover.</p>
+      </div>
+    </div>
+
+    <aside>
+      <div class="card" style="background-image:url('https://images.unsplash.com/photo-1505692794400-5f3b6a1a1d2c?auto=format&fit=crop&w=800&q=80'); background-size:cover; background-position:center;">
+        <div style="background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.6)); padding:18px; border-radius:12px;">
+          <h4 style="color:var(--text)">Why clients choose VLV</h4>
+          <ul class="muted" style="padding-left:16px">
+            <li>Regulatory knowledge & permit management</li>
+            <li>Premium vendor network</li>
+            <li>Specialized high-rise teams</li>
+            <li>Fast procurement & equipped fleet</li>
+          </ul>
+
+          <button class="btn btn-primary" onclick="openWhatsApp('Please send capabilities & references')" style="margin-top:12px">Get Brochure</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section>
+  <h3>Request a Survey or Quote</h3>
+  <p class="muted">Our Dubai Coordinator will contact you during working hours.</p>
+
+  <div class="booking" id="booking">
+    <div>
+      <div style="display:flex;gap:8px">
+        <div style="flex:1">
+          <label class="muted">Name</label>
+          <input id="name" placeholder="Your full name" />
+        </div>
+
+        <div style="width:160px">
+          <label class="muted">Phone/WhatsApp</label>
+          <input id="phone" placeholder="+971 5X XXX XXXX" />
+        </div>
+      </div>
+
+      <div style="display:flex;gap:8px;margin-top:10px">
+        <div style="flex:1">
+          <label class="muted">Service</label>
+          <select id="service">
+            <option>Turnkey Fit-Out</option>
+            <option>MEP Full Package</option>
+            <option>Tiling & Waterproofing</option>
+            <option>Electrical & Lighting</option>
+            <option>Emergency Response</option>
+          </select>
+        </div>
+
+        <div style="width:160px">
+          <label class="muted">Location</label>
+          <input id="location" placeholder="Dubai / Area" />
+        </div>
+      </div>
+
+      <div style="margin-top:10px">
+        <label class="muted">Project Details</label>
+        <textarea id="details" rows="4" placeholder="Describe scope, timeline, budget"></textarea>
+      </div>
+    </div>
+
+    <div>
+      <div class="card" style="height:100%">
+        <h4 style="color:var(--text)">Submit Request</h4>
+        <p class="muted">A WhatsApp pre-filled message will open automatically.</p>
+
+        <div style="display:flex;gap:8px;margin-top:12px">
+          <button class="btn btn-primary" id="submitBtn">Send via WhatsApp</button>
+          <a class="btn btn-ghost" target="_blank" href="https://wa.me/971555555555?text=Hi%20I%20need%20service">Chat Now</a>
+        </div>
+
+        <div style="margin-top:10px" class="muted">
+          Or contact: <a style="color:var(--text-muted)" href="https://wa.me/971555555555">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <strong style="color:var(--text)">Contact</strong>
+    <div class="muted">WhatsApp: +971 55 555 5555 • Phone: +971 4 000 0000</div>
+  </div>
+  <div class="muted">© 2025 VLV ASSOCIATES — Premium Construction & MEP</div>
+</footer>
+</div>
+  <!-- FLOATING WHATSAPP BUTTON -->
+<a class="whatsapp" href="https://wa.me/971555555555?text=Hi%20I%20need%20service" target="_blank">💬</a>
+  <!-- SCRIPT -->
+  <script>
+    function openWhatsApp(text){
+      const txt = encodeURIComponent(text);
+      window.open('https://wa.me/971555555555?text=' + txt, '_blank');
+    }
+
+    document.getElementById('submitBtn').addEventListener('click', function(){
+      const name = document.getElementById('name').value || '—';
+      const phone = document.getElementById('phone').value || '—';
+      const service = document.getElementById('service').value || '—';
+      const location = document.getElementById('location').value || '—';
+      const details = document.getElementById('details').value || '—';
+
+      const msg =
+        `Project Request:%0AName: ${name}%0APhone: ${phone}%0AService: ${service}%0ALocation: ${location}%0ADetails: ${details}`;
+
+      window.open('https://wa.me/971555555555?text=' + msg, '_blank');
+    });
+  </script>
+</body>
+</html>
